@@ -1,11 +1,29 @@
-// .container {
-// 	display: grid;
-// 	grid-template-columns: repeat(3, 1fr);
-// 	gap: 20px;
-// 	position: relative;
-// 	top: -150px;
-// }
+.categories {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+	gap: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-color: aqua;
 
-.container img{
-    width: 100px;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+	position: relative;
+    overflow: hidden;
+}
+
+.category img{
+    width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
 }

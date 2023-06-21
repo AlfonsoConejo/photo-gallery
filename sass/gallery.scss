@@ -1,0 +1,32 @@
+.active--gallery {
+    display: flex;
+    background-color: rgba(0,0,0,.95);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.wrapper-disabled{
+    pointer-events: none;
+}
+
+.active--gallery img{
+    width: 100px;
+}
+
+.gallery__overlay {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+}
+
+.carousel-active-image{
+    border-width: 10px;
+    border: solid;
+    border-color: aquamarine;
+}

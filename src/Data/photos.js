@@ -1,6 +1,4 @@
-'use strict';
-
-var photosData = {    
+export default {    
         photos: {
             argentina: [
                 {
@@ -200,74 +198,3 @@ var photosData = {
             ]
         }, 
 };
-
-const {photos} = photosData;
-
-var dataCategories = {
-    categories: [
-        { id: 'argentina', name: 'Argentina', totalPhotos: photos['argentina'].length, coverImage: './img/argentina/rio-mina-clavero.jpg'},
-        { id: 'mexico', name: 'Mexico', totalPhotos: photos['mexico'].length, coverImage: './img/mexico/barrancas_del_cobre.jpg'},
-        { id: 'brazil', name: 'Brazil', totalPhotos: photos['brazil'].length, coverImage: './img/brazil/amazonas.jpg'},
-        { id: 'colombia', name: 'Colombia', totalPhotos: photos['colombia'].length, coverImage: '../img/brazil/amazonas.jpg'},
-        { id: 'guatemala', name: 'Guatemala', totalPhotos: photos['guatemala'].length, coverImage: './img/brazil/amazonas.jpg'},
-        { id: 'panama', name: 'Panama', totalPhotos: photos['panama'].length, coverImage: './img/brazil/amazonas.jpg'},
-    ],
-};
-
-const {categories: categories$1} = dataCategories;
-const containerCategories = document.getElementById('categories');
-
-categories$1.forEach((category)=> {
-   const newCategory = document.createElement('a');
-   newCategory.setAttribute('draggable','false');
-   const template = `
-
-    <img class="category__img" src="${category.coverImage}" alt=""/> 
-    <div class="categoy-__data">
-        <p class="category__name" >${category.name}</p>
-    </div>
-   `;
-
-   newCategory.innerHTML = template;
-   newCategory.classList.add("category");
-   newCategory.href = "#";
-   newCategory.dataset.category = category.id;
-
-   containerCategories.append(newCategory);
-});
-
-const categoriesContainer = document.getElementById("categories");
-const gallery = document.getElementById("gallery");
-const wrapper = document.getElementById("wrapper");
-console.log(categories);
-
-categoriesContainer.addEventListener('click', (e) => {
-	e.preventDefault(); 
-    if (e.target.closest('a')){
-        console.log(e.target);
-        wrapper.classList.add("wrapper-disabled");
-        gallery.classList.add("active--gallery");
-        document.body.style.overflow = 'hidden';
-        const activeCategory = e.target.dataset.category;
-        const photos = photosData.photos[activeCategory];
-        
-        photos.forEach(photo => {
-            const slide =`
-            <a href="#" class="gallery-carousel-slide">
-                <img class="gallery-carousel-image" src= "${photo.location}"/>
-            </a>
-            `;
-
-            gallery.querySelector('.gallery-carousel-slides').innerHTML += slide;
-
-            gallery.querySelector('.gallery-carousel-slide').classList.add('carousel-active-image');
-        });
-
-        
-    }
-
-    
-
-});
-
-document.getElementById('gallery');

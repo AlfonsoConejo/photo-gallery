@@ -20,10 +20,13 @@
 }
 
 .category img{
-    width: 100%;
+    width:100%;
+    height:100%;
+    object-fit:cover;
     pointer-events: none;
+    
 }
-.categoy-__data{
+.category-__data{
     width: 100%;
     pointer-events: none;
     position:absolute;
@@ -31,7 +34,7 @@
     opacity: 0.5;
 }
 
-a {
+.categories a { 
 	text-decoration: none;
     color: white;
 }

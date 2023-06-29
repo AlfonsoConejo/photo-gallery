@@ -4,7 +4,7 @@
 
 .active--gallery {
     display: block;
-    background: rgba(0, 0, 0, 0.95);
+    // background: rgba(0, 0, 0, 0.95);
     position: fixed;
     top: 0;
     left: 0;
@@ -17,38 +17,61 @@
     align-items: center;
 }
 
-.active--gallery img{
-    width: 100px;
-}
-
-.gallery-title{
-    display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-}
-
 .gallery__overlay {
-        background: rgba(0, 0, 0, 0.95);
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100vh;
-		z-index: 100;
-		overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    overflow: auto;
 }
 
 .gallery_container {
-        width: 90%;
-        // background-color: aliceblue;
-		max-width: 1050px;
-		margin: auto;
-		padding: 40px 0;
-		display: grid;
-		height: 100vh;
-		grid-template-rows: auto 1fr auto;
-		gap: 20px;
-		position: relative;
+    background: rgba(0, 0, 0, 0.95);
+    width: 90%;
+    max-width: 1050px;
+    margin: auto;
+    padding: 40px 0;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    position: relative;
+}
+
+.gallery-title-container{
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+
+.gallery-title-container h3{
+    padding-left: 1.5rem;
+}
+
+.close__btn{
+    background: none;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+.gallery-active-image{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+}
+
+.gallery-image{
+    width: 100%;
+}
+
+.gallery-description-active-image{
+    width: 100%;
+    font-size: 1em;
+    text-align: justify;
+    padding: 1.5em;
 }
 
 .carousel-active-image{
@@ -57,6 +80,55 @@
     border-color: aquamarine;
 }
 
-.gallery a {
-    display:inline-block;
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.gallery__carousel{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+
+.gallery-carousel-slides{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.gallery-carousel-slide{
+    display: block;
+    scroll-snap-align: start;
+    border: 1px solid transparent;
+}
+
+.active--gallery .gallery-carousel-slides img{
+    width: 120px;
+    margin: 0 5px;
+}
+
+.gallery-previous-btn{
+    position: absolute;
+	top: calc(40% - 20px);
+}
+
+.gallery-next-btn{
+    position: absolute;
+	right: 0%;
+	top: calc(40% - 20px);
+}
+
+.gallery__btn{
+    background: none;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+.gallery__btn svg{
+    height: 80px;
+    width: 80px;
 }

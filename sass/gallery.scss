@@ -4,7 +4,7 @@
 
 .active--gallery {
     display: block;
-    // background: rgba(0, 0, 0, 0.95);
+    background: rgb(0, 0, 0);
     position: fixed;
     top: 0;
     left: 0;
@@ -28,7 +28,6 @@
 }
 
 .gallery_container {
-    background: rgba(0, 0, 0, 0.95);
     width: 90%;
     max-width: 1050px;
     margin: auto;

@@ -32,26 +32,35 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="gallery-active-image" id="activeImage">
-                            <img src="" class="gallery-image" />
-                        </div>
+
+                        <div class="gallery-main-image">
+                            <div class="gallery-previous-button">
+                                <button class="gallery__btn" data-action="previous-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                                        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="main-image-container">
+                                <div class="main-image-holder">
+                                    <img src="" class="gallery-image" />
+                                </div>
+                            </div>
+                            <div class="gallery-next-button">
+                                <button class="gallery__btn" data-action="next-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> 
+
                             <p class="gallery-description-active-image"></p>
                             <div class="center">
                                 <div class="gallery__carousel">
                                     <div class="gallery-carousel-slides"></div>
                                 </div>
                             </div>
-                            
-                        <button class="gallery__btn gallery-previous-btn" data-action="previous-img">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
-                                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
-                            </svg>
-                        </button>
-                        <button class="gallery__btn gallery-next-btn" data-action="next-img">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-                            </svg>
-                        </button>
                     </div>
                 </div>
             </section>
